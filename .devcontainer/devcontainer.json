@@ -1,1 +1,22 @@
-{"image":"mcr.microsoft.com/devcontainers/java:17"}
+{
+	"name": "Java-17-bullseye-gradle-minimal",
+	"image": "mcr.microsoft.com/devcontainers/java:0-17-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "true"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				// not needed to reproduce, but handy:
+				"vscjava.vscode-gradle"
+			]
+		}
+	}
+	// "forwardPorts": [],
+	// "postCreateCommand": "java -version",
+	// "remoteUser": "root"
+}
